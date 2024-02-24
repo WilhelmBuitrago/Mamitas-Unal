@@ -1,6 +1,6 @@
 # Mamitas-Unal
 ## Requeriments for PIP (Pypi)
-If you want to install package using only the PIP channel, you should use [instalación de AlphaFold](requeriments/requeriments_forPIP.txt/) file
+If you want to install package using only the PIP channel, you should use [requeriments_forPIP.txt](requeriments/requeriments_forPIP.txt/) file
 ### Install 
 ```
 pip install r requeriments/requeriments_forPIP.txt 

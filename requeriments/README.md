@@ -1,6 +1,6 @@
 # Mamitas-Unal
 ## Requeriments for PIP (Pypi)
-If you want to install package using only the PIP channel, you must use [requeriments_forPIP.txt](requeriments_forPIP.txt/) file
+If you want to install package only using the PIP channel, you must use [requeriments_forPIP.txt](requeriments_forPIP.txt/) file
 ### Install 
 ```
 pip install r requeriments/requeriments_forPIP.txt 

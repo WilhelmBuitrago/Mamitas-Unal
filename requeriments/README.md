@@ -12,16 +12,16 @@ If you want to create a enveiroment with the necessary packages:
 ```
 conda create env --name <name> --file requeriments/requeriments_forCondaEnvs.txt -c defaults conda-forge pypi esri
 ```
-If you want only install the packages use:
+If you only want install the packages use:
 ```
 conda install --file requeriments/requeriments_forCondaEnvs.txt -c defaults conda-forge pypi esri
 ```
 ### Warnings
-If you have problems with tensorflow-addons package, you need eliminated this packages for the requeriments file and use:
+If you have problems with tensorflow-addons package, you need eliminated this package in the requeriments file and use:
 ```
 pip install tensorflow-addons
 ```
-and
+and then use (without tensoflow-addons package):
 ```
 conda install --file requeriments/requeriments_forCondaEnvs.txt -c defaults conda-forge pypi esri
 ```

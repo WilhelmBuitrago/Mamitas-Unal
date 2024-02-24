@@ -6,7 +6,7 @@ If you want to install package using only the PIP channel, you should use [reque
 pip install r requeriments/requeriments_forPIP.txt 
 ```
 ## Requeriments for conda or miniconda
-If you have been use a conda envs, you should use [requeriments_forCondaEnvs.txt](requeriments_forCondaEnvs.txt/) file
+If you want to use a conda envs, you should use [requeriments_forCondaEnvs.txt](requeriments_forCondaEnvs.txt/) file
 ### Install
 If you want to create a enveiroment with the need it packages:
 ```

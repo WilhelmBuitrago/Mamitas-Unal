@@ -5,7 +5,7 @@ https://github.com/cralji/RFF-Nerve-UTP/blob/main/UNET-Nerve-UTP.ipynb
 from functools import partial
 import tensorflow as tf
 from keras import Model, layers, regularizers
-from convRFF import ConvRFF_block
+from convRFF.models.layers.convRFF import ConvRFF_block
 
 
 DefaultConv2D = partial(layers.Conv2D,

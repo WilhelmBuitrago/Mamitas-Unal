@@ -161,8 +161,8 @@ cython_debug/
 
 # Carpetas
 code/Metrics/__pycache__
-code/convRFF/__pycache__
 code/loss/__pycache__
 code/convRFF/res_unet/__pycache__
 code/convRFF/fcn/__pycache__
 code/convRFF/unet/__pycache__
+code/gcpds/DataSet/InfraredThermalFeet/Dataset/

@@ -165,4 +165,5 @@ code/loss/__pycache__
 code/convRFF/res_unet/__pycache__
 code/convRFF/fcn/__pycache__
 code/convRFF/unet/__pycache__
-code/gcpds/DataSet/InfraredThermalFeet/Dataset/
+code/gcpds/DataSet/InfraredThermalFeet/
+code/gcpds/DataSet/convRFFds/__pycache__

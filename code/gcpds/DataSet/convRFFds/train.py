@@ -6,7 +6,7 @@ from Metrics import (jaccard,
                      specificity,
                      )
 from Metrics.dice import DiceCoefficientMetric
-from convRFF.data import get_data
+from code.gcpds.DataSet.convRFF.data import get_data
 import tensorflow as tf
 import numpy as np
 import pandas as pd

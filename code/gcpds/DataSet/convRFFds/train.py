@@ -1,12 +1,12 @@
 import wandb
-from wandb.keras import WandbCallback
+from wandb.integration.keras import WandbCallback
 from loss.dice import DiceCoefficient
 from Metrics import (jaccard,
                      sensitivity,
                      specificity,
                      )
 from Metrics.dice import DiceCoefficientMetric
-from code.gcpds.DataSet.convRFF.data import get_data
+from .data import get_data
 import tensorflow as tf
 import numpy as np
 import pandas as pd

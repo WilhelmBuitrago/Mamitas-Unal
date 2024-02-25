@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 from __future__ import print_function
 from __future__ import division
-from code.gcpds.DataSet.convRFF.train import get_compile_parameters
+from .gcpds.DataSet.convRFFds.train import get_compile_parameters
 from keras.applications.vgg16 import VGG16
 from gcpds.Metrics import (dice,
                            jaccard,
@@ -13,7 +13,7 @@ from keras import regularizers
 from functools import partial
 import keras.layers as layers
 import keras.backend as K
-from code.gcpds.DataSet.convRFF import data
+from .gcpds.DataSet.convRFFds.data import data
 import tensorflow as tf
 from tqdm import tqdm
 import pandas as pd

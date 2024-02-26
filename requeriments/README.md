@@ -15,7 +15,7 @@ then for tensorflow-addons use:
 ```
 pip install tensorflow-addons[tensorflow]
 ```
-And then use:
+And for opencv use:
 ```
 conda install opencv -c conda-forge
 ```

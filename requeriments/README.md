@@ -1,4 +1,5 @@
 # Mamitas-Unal Requeriments
+You need have Microsoft Visual C++ >14.0 version 
 ## 1. Creation the environment
 You need have conda or miniconda with Python 3.10.12 version, for use this project then for create a environment you must use:
 ```
@@ -10,7 +11,11 @@ For install package using the PIP channel, you must use [requeriments_forPIP.txt
 ```
 pip install -r requeriments/requeriments_forPIP.txt 
 ```
-And then for tensorflow-addons use:
+then for tensorflow-addons use:
 ```
 pip install tensorflow-addons[tensorflow]
+```
+And then for opencv use:
+```
+conda install opencv -c conda-forge
 ```

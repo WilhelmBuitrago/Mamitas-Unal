@@ -1,6 +1,6 @@
 # Mamitas-Unal Requeriments
 ## 1. Creation the environment
-You need have conda or miniconda with Python:3.10.12 for use this project then for create a environment you must use:
+You need have conda or miniconda with Python 3.10.12 version, for use this project then for create a environment you must use:
 ```
 conda create --name <name> python==3.10.12
 ```

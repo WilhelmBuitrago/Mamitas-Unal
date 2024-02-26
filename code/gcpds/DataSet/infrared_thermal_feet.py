@@ -6,15 +6,10 @@ Infrared Thermal Images of Feet
 
 import os
 from glob import glob
-
 import cv2
 import numpy as np
 import tensorflow as tf
-from utils import download_from_drive
-from utils import unzip
-from utils import listify
 from sklearn.model_selection import GroupShuffleSplit
-import shutil
 
 
 class InfraredThermalFeet:
@@ -161,7 +156,6 @@ class ModifiedInfraredThermalFeet(InfraredThermalFeet):
 
         self.groups = list(map(lambda x: os.path.split(x)[-1].split('_')[0],
                                self.file_images))
-        print(self.groups)
         self.num_samples = len(self.file_images)
 
     def __set_env(self):
@@ -169,3 +163,22 @@ class ModifiedInfraredThermalFeet(InfraredThermalFeet):
                                 'InfraredThermalFeet.zip')
         os.makedirs(self.__folder, exist_ok=True)
         unzip(path_zip, self.__folder)
+
+
+if __name__ == "__main__":
+    import convRFFds.data as data
+    from utils import download_from_drive
+    from utils import unzip
+    from utils import listify
+    kwargs_data_augmentation = dict(repeat=1,
+                                    batch_size=2,
+                                    shape=224,
+                                    split=[0.4, 0.3]
+                                    )
+    dataset = ModifiedInfraredThermalFeet
+    train_dataset, val_dataset, test_dataset = data.get_data(
+        dataset_class=dataset, data_augmentation=False, return_label_info=True, **kwargs_data_augmentation)
+else:
+    from .utils import download_from_drive
+    from .utils import unzip
+    from .utils import listify

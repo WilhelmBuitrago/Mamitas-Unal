@@ -5,7 +5,6 @@ https://github.com/cralji/RFF-Nerve-UTP/blob/main/Res-UNET_Nerve-UTP.ipynb
 from keras import Model, layers, initializers
 from functools import partial
 from convRFF.models.layers.convRFF import ConvRFF_block
-from utils import upsample_conv, DefaultConv2D, kernel_initializer, res_block
 
 
 def get_model(input_shape=(128, 128, 3), name='RES_UNET_RFF_SKIPS', out_channels=1,
@@ -105,5 +104,8 @@ def get_model(input_shape=(128, 128, 3), name='RES_UNET_RFF_SKIPS', out_channels
 
 
 if __name__ == '__main__':
+    from utils import upsample_conv, DefaultConv2D, kernel_initializer, res_block
     model = get_model()
     model.summary()
+else:
+    from .utils import upsample_conv, DefaultConv2D, kernel_initializer, res_block

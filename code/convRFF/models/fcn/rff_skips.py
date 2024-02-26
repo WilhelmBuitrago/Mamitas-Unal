@@ -7,7 +7,6 @@ from functools import partial
 import tensorflow as tf
 from keras import Model, layers, regularizers
 from convRFF.models.layers.convRFF import ConvRFF_block
-from utils import DefaultConv2D, kernel_initializer, DefaultPooling, DefaultTranspConv
 
 
 def get_model(input_shape=(128, 128, 3), name='FCN', out_channels=1, out_ActFunction='sigmoid',
@@ -89,6 +88,9 @@ def get_model(input_shape=(128, 128, 3), name='FCN', out_channels=1, out_ActFunc
 
 
 if __name__ == "__main__":
+    from utils import DefaultConv2D, kernel_initializer, DefaultPooling, DefaultTranspConv
     kernel_regularizer = regularizers.L1L2(l1=1e-5, l2=1e-4)
     model = get_model(kernel_regularizer=kernel_regularizer)
     model.summary()
+else:
+    from .utils import DefaultConv2D, kernel_initializer, DefaultPooling, DefaultTranspConv

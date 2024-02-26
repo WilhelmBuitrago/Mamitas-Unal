@@ -3,7 +3,6 @@ https://github.com/cralji/RFF-Nerve-UTP/blob/main/Res-UNET_Nerve-UTP.ipynb
 """
 
 from keras import Model, layers, initializers
-from utils import upsample_conv, DefaultConv2D, kernel_initializer, res_block_convRFF, res_block
 
 
 def get_model(input_shape=(128, 128, 3),
@@ -88,7 +87,10 @@ def get_model(input_shape=(128, 128, 3),
 
 
 if __name__ == '__main__':
+    from utils import upsample_conv, DefaultConv2D, kernel_initializer, res_block_convRFF, res_block
     from keras import regularizers
     kernel_regularizer = regularizers.L1L2(l1=1e-5, l2=1e-4)
     model = get_model(kernel_regularizer=kernel_regularizer)
     model.summary()
+else:
+    from .utils import upsample_conv, DefaultConv2D, kernel_initializer, res_block_convRFF, res_block

@@ -5,7 +5,6 @@ https://github.com/cralji/RFF-Nerve-UTP/blob/main/FCN_Nerve-UTP.ipynb
 from functools import partial
 import tensorflow as tf
 from keras import layers, Model
-from utils import DefaultConv2D, kernel_initializer, DefaultPooling, DefaultTranspConv
 
 
 def get_model(input_shape=(128, 128, 3), name='FCN', out_channels=1, out_ActFunction='sigmoid',
@@ -89,5 +88,8 @@ def get_model(input_shape=(128, 128, 3), name='FCN', out_channels=1, out_ActFunc
 
 
 if __name__ == "__main__":
+    from utils import DefaultConv2D, kernel_initializer, DefaultPooling, DefaultTranspConv
     model = get_model()
     model.summary()
+else:
+    from .utils import DefaultConv2D, kernel_initializer, DefaultPooling, DefaultTranspConv

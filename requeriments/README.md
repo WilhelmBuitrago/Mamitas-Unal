@@ -10,7 +10,7 @@ For install package using the PIP channel, you must use [requeriments_forPIP.txt
 ```
 pip install -r requeriments/requeriments_forPIP.txt 
 ```
-and then for tensorflow-addons use:
+And then for tensorflow-addons use:
 ```
 pip install tensorflow-addons[tensorflow]
 ```

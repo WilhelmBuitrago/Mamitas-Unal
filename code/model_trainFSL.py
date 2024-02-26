@@ -86,7 +86,7 @@ if __name__ == "__main__":
     dataset = ModifiedInfraredThermalFeet
     train_dataset, val_dataset, test_dataset = data.get_data(
         dataset_class=dataset, data_augmentation=False, return_label_info=True, **kwargs_data_augmentation)
-    """    
+
     LR = 0.0001
     input_size = (224, 224, 1)
     encoder = 'VGG'
@@ -110,4 +110,3 @@ if __name__ == "__main__":
     plt.plot(accur)
     plt.title("Accuracy")
     plt.show()
-    """

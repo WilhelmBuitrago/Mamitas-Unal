@@ -1,5 +1,5 @@
 # This file may be used to create an environment using:
-# $ conda create --name <env> --file <this file> -c defaults conda-forge pypi
+# $ conda create --name <env> --file <this file> -c defaults conda-forge pypi esri
 # platform: win-64
 absl-py=2.1.0=pypi_0
 archspec=0.2.1=pyhd3eb1b0_0

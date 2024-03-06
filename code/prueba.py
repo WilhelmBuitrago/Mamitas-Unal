@@ -1,4 +1,5 @@
 from tensorflow.python.client import device_lib
+import tensorflow
 
 
 def get_available_devices():
@@ -7,3 +8,11 @@ def get_available_devices():
 
 
 print(get_available_devices())
+
+gpus = tensorflow.config.list_physical_devices('GPU')
+if gpus:
+    device = '/device:GPU:0'
+else:
+    device = '/device:CPU:0'
+with tensorflow.device(device):
+    print("device:", device)

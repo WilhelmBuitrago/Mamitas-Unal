@@ -11,4 +11,4 @@ En esta subcarpeta, encontrarás los siguientes componentes:
 
 ## Licencia
 
-Esta subcarpeta del proyecto GCPDS utiliza la Licencia MIT. Consulta el archivo [LICENSE](...code/convRFF/LICENSE) dentro de la carpeta ConvRFF para más detalles.
+Esta subcarpeta del proyecto GCPDS utiliza la Licencia MIT. Consulta el archivo [LICENSE](../convRFF/LICENSE) dentro de la carpeta ConvRFF para más detalles.

@@ -12,7 +12,7 @@ El contenido de este repositorio se organiza de la siguiente manera:
 
 - `models/`: Carpeta que contiene las implementaciones de modelos de segmentación utilizando ConvRFF.
 - `models/layers`: Carpeta que incluye las funciones y clases necesarias para la utilización de la técnica ConvRFF.
-- 
+
 ## Licencia
 
 Este proyecto está bajo la Licencia BSD 2-Clause "Simplified". Consulta el archivo [LICENSE](LICENSE) para más detalles.

@@ -169,3 +169,4 @@ code/gcpds/DataSet/InfraredThermalFeet/
 code/gcpds/DataSet/convRFFds/__pycache__
 code/FSL/models/models_saved/
 code/pruebas.py
+wandb/

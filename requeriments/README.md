@@ -8,7 +8,7 @@ conda create --name <name> --file requeriments/requeriments_ForCondaEnvs.txt
 ```
 ## Using Python environment
 > [!IMPORTANT]
-> You need have 3.10.12 python verion
+> You need have 3.10.12 python version
 
 For install package only using the PIP channel, you must use [requeriments for PIP](requeriments_forPIP.txt/) file
 ### Install 

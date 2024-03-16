@@ -28,9 +28,9 @@ def train(model, traind, vald, parameters):
 
     gpus = tf.config.list_physical_devices('GPU')
     if gpus:
-        device = '/gpu:0'
+        device = '/device:GPU:0'
     else:
-        device = '/cpu:0'
+        device = '/device:CPU:0'
     with tf.device(device):
         for ep in range(epochs):
             epoch_loss = 0
@@ -93,10 +93,10 @@ if __name__ == "__main__":
     k_shot = 5
     Model10way5shot = FSLmodel(
         encoder=encoder, input_size=input_size, k_shot=k_shot, learning_rate=LR)
-    parameters = {'epochs': 1,
+    parameters = {'epochs': 4,
                   'tr_iterations': 10,
                   'it_eval': 1,
-                  'nway': 10,
+                  'nway': 1,
                   'kshot': 5}
     train(Model10way5shot, train_dataset, val_dataset, parameters)
 

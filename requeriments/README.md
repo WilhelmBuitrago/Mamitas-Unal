@@ -1,17 +1,17 @@
 # Mamitas-Unal Requeriments
-You need have Microsoft Visual C++ >14.0 version 
-## 1. Creation the environment
-You need have conda or miniconda with Python 3.10.12 version, for use this project then for create a environment you must use:
+> [!IMPORTANT]
+> You need have Microsoft Visual C++ >14.0 version 
+## Using Conda or Miniconda
+If you want create a environment in conda or miniconda, you must use [requeriments for Conda envs](requeriments_forCondaEnvs.txt/) file:
 ```
-conda create --name <name> python==3.10.12
+conda create --name <name> --file requeriments/requeriments_ForCondaEnvs.txt 
 ```
-## 2. Requeriments with PIP (Pypi)
-For install package using the PIP channel, you must use [requeriments_forPIP.txt](requeriments_forPIP.txt/) file
+## Using Python environment
+> [!IMPORTANT]
+> You need have 3.10.12 python version
+
+For install package only using the PIP channel, you must use [requeriments for PIP](requeriments_forPIP.txt/) file
 ### Install 
 ```
 pip install -r requeriments/requeriments_forPIP.txt 
-```
-then for tensorflow-addons use:
-```
-pip install tensorflow-addons[tensorflow]
 ```

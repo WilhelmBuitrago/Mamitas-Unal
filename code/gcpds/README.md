@@ -1,4 +1,4 @@
-# GCPDS - Proyecto de Segmentación de Imágenes
+# GCPDS - Image Segmentation Library
 
 Este repositorio contiene archivos relacionados con el proyecto de segmentación de imágenes de GCPDS (Grupo de Control y Procesamiento Digital de Señales), incluyendo un conjunto de datos experimental, códigos para extracción y uso de datos, así como modelos de segmentación como FCN, Unet y ResUnet.
 

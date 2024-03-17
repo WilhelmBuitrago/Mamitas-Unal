@@ -16,4 +16,4 @@ El contenido de este repositorio se organiza de la siguiente manera:
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT license. Consulte el archivo [LICENSE](LICENSE) para más detalles.
-git clone https://github.com/aguirrejuan/ConvRFF.git
+

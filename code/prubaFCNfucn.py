@@ -106,6 +106,7 @@ class FCNModel():
     def CreateModel(self, input_size=(256, 256, 1), k_shot=1):
         initial_layer = layers.Input(shape=input_size)
         encoder = self.fcn_encoder(initial_layer=initial_layer)
+
         S_input2 = layers.Input(
             (k_shot, input_size[0], input_size[1], input_size[2]))
         Q_input2 = layers.Input(input_size)
@@ -113,9 +114,11 @@ class FCNModel():
             (k_shot, int(input_size[0]/32), int(input_size[1]/32), 1))
 
         kshot_encoder = tf.keras.models.Sequential()
-        kshot_encoder.add(layers.TimeDistributed(encoder, input_shape=(
+
+        kshot_encoder.add(layers.TimeDistributed(Model(inputs=encoder.input, outputs=encoder.output[2]), input_shape=(
             k_shot, input_size[0], input_size[1], input_size[2])))  # Arreglar salida modelo encoder
         s_encoded = kshot_encoder(S_input2)
+
         level_1, level_2, q_encoded = encoder(Q_input2)
 
         s_encoded = layers.TimeDistributed(layers.Conv2D(
@@ -134,13 +137,11 @@ class FCNModel():
             np.int32(x.shape[2]), np.int32(x.shape[3]), np.int32(x.shape[4])))(x)
         x = tf.keras.backend.repeat_elements(x, repx, axis=1)
         s_encoded = tf.keras.backend.repeat_elements(x, repy, axis=2)
-
         # Common Representation of Support and Query sample
         Bi_rep = self.common_representation(s_encoded, q_encoded)
-
         final = self.fcn_decoder(encoder_output=[level_1, level_2, Bi_rep])
 
-        return Model(inputs=Q_input2, outputs=final)
+        return Model(inputs=[S_input2, S_mask2, Q_input2], outputs=final)
 
 
 if __name__ == "__main__":

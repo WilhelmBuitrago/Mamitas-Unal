@@ -93,10 +93,10 @@ if __name__ == "__main__":
     k_shot = 5
     Model10way5shot = FSLmodel(
         encoder=encoder, input_size=input_size, k_shot=k_shot, learning_rate=LR)
-    parameters = {'epochs': 4,
-                  'tr_iterations': 10,
-                  'it_eval': 1,
-                  'nway': 1,
+    parameters = {'epochs': 40,
+                  'tr_iterations': 7,
+                  'it_eval': 2,
+                  'nway': 10,
                   'kshot': 5}
     train(Model10way5shot, train_dataset, val_dataset, parameters)
 

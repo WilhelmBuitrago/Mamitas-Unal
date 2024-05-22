@@ -17,6 +17,8 @@ class InfraredThermalFeet:
 
     def __init__(self, split=[0.2, 0.2], seed: int = 42,
                  id_: str = "1HZa4pVwlIXCrRIidflB158kmtYGW23Qe"):
+        options = tf.data.Options()
+        options.experimental_distribute.auto_shard_policy = tf.data.experimental.AutoShardPolicy.DATA
 
         self.split = listify(split)
         self.seed = seed

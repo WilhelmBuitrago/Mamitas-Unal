@@ -101,8 +101,6 @@ def FSLmodel(encoder='FCN', input_size=(256, 256, 1), k_shot=1, learning_rate=1e
             return x
 
         encoder = fcn_encoder(input_size=input_size)
-        level_1 = encoder.get_layer('Pool30').output
-        level_2 = encoder.get_layer('Pool40').output
 
         ###################################### K-shot learning #####################################
         # K shot
